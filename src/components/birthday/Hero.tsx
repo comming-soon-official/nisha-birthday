@@ -79,11 +79,25 @@ const Hero = () => {
           </span>
         </h1>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1.1, ease: [0.34, 1.56, 0.64, 1] }}
+          className="mt-6 flex items-center justify-center gap-3"
+        >
+          <span className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-accent/70" />
+          <span className="font-serif italic text-2xl sm:text-3xl text-accent">turns</span>
+          <span className="font-serif font-bold text-5xl sm:text-6xl text-gradient" style={{ textShadow: '0 0 40px hsl(338 80% 60% / 0.6)' }}>
+            20
+          </span>
+          <span className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-accent/70" />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-8 text-base sm:text-lg md:text-xl text-muted-foreground font-light italic max-w-xl mx-auto px-4"
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground font-light italic max-w-xl mx-auto px-4"
         >
           {TAGLINE}
         </motion.p>
