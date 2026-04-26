@@ -12,13 +12,13 @@ import video7 from '@/assets/video/ssstik.io_@luriktma06_1777184603026.mp4';
 import video8 from '@/assets/video/ssstik.io_@luriktma06_1777184767261.mp4';
 
 const videos = [
-  { src: video3, title: 'मैनबत्तीको त्यो उज्यालो' },
-  { src: video2, title: 'खुसीको उत्सव' },
-  { src: video5, title: 'जन्मदिनको उमङ्ग' },
-  { src: video1, title: 'रङ्गीन रौनकता' },
-  { src: video4, title: 'रमाइला रातहरू' },
-  { src: video7, title: 'मिठो सरप्राइज' },
-  { src: video8, title: 'फेरि त्यही रमाइलो' },
+  { src: video3, title: 'That Candlelight Glow' },
+  { src: video2, title: 'Celebration of Joy' },
+  { src: video5, title: 'Birthday Excitement' },
+  { src: video1, title: 'Colorful Festivity' },
+  { src: video4, title: 'Fun Nights' },
+  { src: video7, title: 'Sweet Surprise' },
+  { src: video8, title: 'The Fun Again' },
 ];
 
 const VideoCarousel = () => {
@@ -119,7 +119,7 @@ const VideoCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
         >
-          भिडियोको झल्को
+          Video Glimpses
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -128,7 +128,7 @@ const VideoCarousel = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
         >
-          हाम्रा प्यारा सम्झनाहरू
+          Our Cherished Memories
         </motion.h2>
       </div>
 

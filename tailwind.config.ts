@@ -11,10 +11,6 @@ export default {
       screens: { "2xl": "1400px" },
     },
     extend: {
-      fontFamily: {
-        serif: ['"Noto Serif Devanagari"', '"Playfair Display"', '"Kohinoor Devanagari"', '"Nirmala UI"', 'Mangal', 'serif'],
-        sans: ['"Noto Sans Devanagari"', 'Inter', '"Kohinoor Devanagari"', '"Nirmala UI"', 'Mangal', '"Arial Unicode MS"', 'sans-serif'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -3,34 +3,34 @@ import { Quote } from 'lucide-react';
 
 const quotes = [
   { 
-    text: 'तिम्रो हाँसो अलि बेग्लै छ, यो कोलाहलमा पनि आफ्नै धुन बोकेर हिँड्छ। अरूले जे सुकै भनून्, तर तिमीले आफ्नो त्यो चञ्चलता कहिल्यै नगुमाउनु।', 
-    name: 'निशा', 
-    role: 'आफ्नै धुन' 
+    text: 'Your smile is truly different. Even in the noise, it carries its own rhythm. No matter what others say, never lose that playful spark in you.', 
+    name: 'Nisha', 
+    role: 'Her Own Rhythm' 
   },
   { 
-    text: 'बीस वर्ष पुग्दा मनमा धेरै कुरा खेल्छन् होला, अलि डर अलि उत्साह। तर याद राख, तिमीले केही प्रमाणित गरिरहनु पर्दैन, तिमी जस्तो छौ, यो उमेरको लागि त्यही काफी छ।', 
-    name: 'अस्तित्व', 
-    role: 'नयाँ मोड' 
+    text: 'Turning twenty can stir so many feelings, a little fear and a little excitement. But remember, you do not have to prove anything. Being exactly who you are is more than enough for this age.', 
+    name: 'Identity', 
+    role: 'A New Turn' 
   },
   { 
-    text: 'कति रातहरू गाह्रो भए होलान्, कति पटक भित्रभित्रै भाँचियौ होला। तर आज यहाँसम्म आइपुग्दा तिम्रो आँखामा जुन चमक छ नि, त्यो नै तिम्रो सबैभन्दा ठूलो जित हो।', 
-    name: 'हिम्मत', 
-    role: 'जित' 
+    text: 'There must have been hard nights, and moments when you quietly broke inside. But the light in your eyes today, after coming this far, is your greatest victory.', 
+    name: 'Courage', 
+    role: 'Victory' 
   },
   { 
-    text: 'यो संसारमा मान्छेहरू आउँछन् र जान्छन्, तर तिम्रो त्यो अलिकति जिद्दी र धेरै मायालु स्वभाव—यसलाई सधैं जीवित राख्नु। यही नै तिमीलाई अरूभन्दा फरक बनाउने कुरा हो।', 
-    name: 'स्वभाव', 
-    role: 'खास तिमी' 
+    text: 'People come and go in this world, but keep that little stubbornness and big-hearted warmth alive in you. That is exactly what makes you different from everyone else.', 
+    name: 'Nature', 
+    role: 'The Real You' 
   },
   { 
-    text: 'समय छिटो दौडिन्छ, तर तिमी कहिलेकाहीँ रोकिनु। आफ्नै मनको कुरा सुन्नु। तिमी आफैंमा एउटा यस्तो संसार हौ, जहाँ खुसी हुन कसैको अनुमति चाहिँदैन।', 
-    name: 'दर्शन', 
-    role: 'स्वतन्त्र मन' 
+    text: 'Time runs fast, but pause sometimes. Listen to your own heart. You are a whole world within yourself, where happiness does not need anyone else\'s permission.', 
+    name: 'Reflection', 
+    role: 'A Free Spirit' 
   },
   { 
-    text: 'संसारलाई धेरै ठूला कुरा चाहिएको छैन, बस तिमी जस्तो कोमल मन भएको एउटा मान्छे भए पुग्छ। तिमी हुनु मात्रै पनि धेरैका लागि एउटा ठूलो राहत हो।', 
-    name: 'महत्व', 
-    role: 'उपहार' 
+    text: 'The world does not always need grand things. Sometimes one person with a gentle heart, like you, is enough. Your presence alone is a great comfort to many.', 
+    name: 'Meaning', 
+    role: 'A Gift' 
   },
 ];
 
@@ -46,7 +46,7 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
             className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
           >
-            निशाको लागि मात्र
+            Only for Nisha
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -55,7 +55,7 @@ const Testimonials = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
           >
-            केही मनका कुरा
+            A Few Words from the Heart
           </motion.h2>
         </div>
 

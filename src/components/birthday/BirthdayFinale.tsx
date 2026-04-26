@@ -31,7 +31,7 @@ const BirthdayFinale = () => {
             transition={{ duration: 0.6 }}
             className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
           >
-            अन्तिम कोसेली
+            One Last Gift
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -40,9 +40,9 @@ const BirthdayFinale = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
           >
-            एउटा मिठो सरप्राइज
+            A Sweet Surprise
           </motion.h2>
-            <p className="mt-4 text-sm sm:text-base text-foreground/75">यो उपहारलाई छुनुहोस् र उत्सवको रौनकता बढाउनुहोस्।</p>
+            <p className="mt-4 text-sm sm:text-base text-foreground/75">Tap this gift and turn up the celebration.</p>
           </div>
 
           <motion.div
@@ -58,7 +58,7 @@ const BirthdayFinale = () => {
               className="mx-auto flex w-full max-w-md h-16 sm:h-20 rounded-2xl bg-gradient-rose-gold text-background hover:opacity-90 hover:scale-[1.03] transition-all font-semibold text-base sm:text-xl tracking-wide shadow-[var(--shadow-rose)] border-0"
             >
               <Gift className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-              सरप्राइज खोल्नुहोस्
+                Open the Surprise
             </Button>
           </motion.div>
         </div>
@@ -69,8 +69,8 @@ const BirthdayFinale = () => {
           <div className="pointer-events-none absolute -top-24 -left-20 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -right-20 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
 
-          <DialogTitle className="sr-only">जन्मदिनको सरप्राइज</DialogTitle>
-          <DialogDescription className="sr-only">केक र झिलिमिलीका साथ जन्मदिनको शुभकामना सन्देश।</DialogDescription>
+          <DialogTitle className="sr-only">Birthday Surprise</DialogTitle>
+          <DialogDescription className="sr-only">A birthday wish message with cake and sparkles.</DialogDescription>
 
           <motion.div
             initial={{ opacity: 0, y: 16, scale: 0.96 }}
@@ -79,14 +79,14 @@ const BirthdayFinale = () => {
           >
             <div className="text-5xl sm:text-7xl mb-4">🎂</div>
             <h3 className="birthday-3d-title font-serif text-4xl sm:text-6xl md:text-7xl font-semibold leading-tight text-gradient">
-              जन्मदिनको शुभकामना!
+              Happy Birthday!
             </h3>
             <p className="mt-3 text-base sm:text-lg text-foreground/85 font-serif italic">
-              तिम्रो आउने वर्ष खुसी, उमङ्ग र सुन्दर पलहरूले भरिपूर्ण होस्।
+              May your coming year be filled with joy, excitement, and beautiful moments.
             </p>
             <div className="mt-5 inline-flex items-center gap-2 text-accent">
               <Sparkles className="h-4 w-4" />
-              <span className="text-sm sm:text-base tracking-wide">सधैं यसरी नै चम्किरहनु</span>
+              <span className="text-sm sm:text-base tracking-wide">Keep shining like this, always</span>
               <Sparkles className="h-4 w-4" />
             </div>
           </motion.div>

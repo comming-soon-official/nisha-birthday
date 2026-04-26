@@ -56,7 +56,7 @@ const Hero = () => {
 
         <h1 className="pt-3 sm:pt-4 font-serif font-bold leading-[1.16] tracking-tight overflow-visible">
           <span className="block text-sm sm:text-base md:text-lg tracking-normal text-muted-foreground mb-6 font-sans font-light">
-            हाम्रो प्यारी
+            Our dearest
           </span>
           <span className="flex justify-center flex-wrap [perspective:800px] overflow-visible">
             {letters.map((char, i) => (
@@ -85,9 +85,9 @@ const Hero = () => {
           className="mt-6 flex items-center justify-center gap-3"
         >
           <span className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-accent/70" />
-          <span className="font-serif italic text-2xl sm:text-3xl text-accent">अहिले</span>
+          <span className="font-serif italic text-2xl sm:text-3xl text-accent">Now</span>
           <span className="hero-age-glow font-serif font-bold text-5xl sm:text-6xl text-gradient">
-            २०
+            20
           </span>
           <span className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-accent/70" />
         </motion.div>
@@ -98,7 +98,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 1.4 }}
           className="mt-4 text-[10px] sm:text-xs tracking-normal text-muted-foreground/85"
         >
-          तिम्रो लागि, हिमाल ले बनाएको
+          Made for you, by Himal
         </motion.p>
       </div>
 
@@ -114,7 +114,7 @@ const Hero = () => {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           className="flex flex-col items-center gap-2 text-muted-foreground"
         >
-          <span className="text-[10px] sm:text-xs tracking-normal">तल हेर्नुहोस्</span>
+          <span className="text-[10px] sm:text-xs tracking-normal">Scroll down</span>
           <ChevronDown className="h-4 w-4" />
         </motion.div>
       </motion.div>

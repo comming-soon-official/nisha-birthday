@@ -15,17 +15,17 @@ import nisha12 from '@/assets/nisha12.png';
 import nisha13 from '@/assets/nisha13.jpeg';
 
 const photos = [
-  { src: nisha2, caption: 'एउटा मिठो चाहना' },
-  { src: nisha3, caption: 'सधैं रहिरहने हाँसो' },
-  { src: nisha4, caption: 'खुसीका रङ्गहरू' },
-  { src: nisha5, caption: 'रङ्गीन यादहरू' },
-  { src: nisha7, caption: 'सधैं यसरी नै चम्किरहनु' },
-  { src: nisha8, caption: 'मुस्कानले भरिएको संसार' },
-  { src: nisha9, caption: 'प्यारा साना पलहरू' },
-  { src: nisha10, caption: 'न्यानो मुस्कान' },
-  { src: nisha11, caption: 'उमङ्ग र उत्साह' },
-  { src: nisha12, caption: 'खुसीको एउटा झलक' },
-  { src: nisha13, caption: 'साँचेर राखेका सम्झनाहरू' },
+  { src: nisha2, caption: 'A Sweet Wish' },
+  { src: nisha3, caption: 'A Smile That Lasts Forever' },
+  { src: nisha4, caption: 'Colors of Joy' },
+  { src: nisha5, caption: 'Colorful Memories' },
+  { src: nisha7, caption: 'Keep Shining Like This Always' },
+  { src: nisha8, caption: 'A World Filled with Smiles' },
+  { src: nisha9, caption: 'Precious Little Moments' },
+  { src: nisha10, caption: 'A Warm Smile' },
+  { src: nisha11, caption: 'Joy and Excitement' },
+  { src: nisha12, caption: 'A Glimpse of Happiness' },
+  { src: nisha13, caption: 'Memories to Hold Close' },
 ];
 
 const PhotoCarousel = () => {
@@ -48,7 +48,7 @@ const PhotoCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
         >
-          फोटो ग्यालरी
+          Photo Gallery
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -57,7 +57,7 @@ const PhotoCarousel = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
         >
-          कहिल्यै नमेटिने पलहरू
+          Moments That Never Fade
         </motion.h2>
       </div>
 
