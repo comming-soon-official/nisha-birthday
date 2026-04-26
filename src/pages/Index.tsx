@@ -1,16 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import GradientMesh from '@/components/birthday/GradientMesh';
+import Hero from '@/components/birthday/Hero';
+import Countdown from '@/components/birthday/Countdown';
+import PhotoCarousel from '@/components/birthday/PhotoCarousel';
+import VideoCarousel from '@/components/birthday/VideoCarousel';
+import Testimonials from '@/components/birthday/Testimonials';
+import WishesForm from '@/components/birthday/WishesForm';
+import Footer from '@/components/birthday/Footer';
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = 'Happy Birthday, Aurora — A Celebration';
+    const desc = 'A modern, dark-and-gradient birthday celebration page with photos, videos, heartfelt quotes and wishes for someone special.';
+    let m = document.querySelector('meta[name="description"]');
+    if (!m) {
+      m = document.createElement('meta');
+      m.setAttribute('name', 'description');
+      document.head.appendChild(m);
+    }
+    m.setAttribute('content', desc);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="relative min-h-screen text-foreground">
+      <GradientMesh />
+      <Hero />
+      <Countdown />
+      <PhotoCarousel />
+      <VideoCarousel />
+      <Testimonials />
+      <WishesForm />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
