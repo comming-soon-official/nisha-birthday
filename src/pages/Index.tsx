@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import GradientMesh from '@/components/birthday/GradientMesh';
 import Hero from '@/components/birthday/Hero';
-import Countdown from '@/components/birthday/Countdown';
+import TodayBanner from '@/components/birthday/TodayBanner';
 import PhotoCarousel from '@/components/birthday/PhotoCarousel';
 import VideoCarousel from '@/components/birthday/VideoCarousel';
 import Testimonials from '@/components/birthday/Testimonials';
@@ -10,8 +10,8 @@ import Footer from '@/components/birthday/Footer';
 
 const Index = () => {
   useEffect(() => {
-    document.title = 'Happy Birthday, Aurora — A Celebration';
-    const desc = 'A modern, dark-and-gradient birthday celebration page with photos, videos, heartfelt quotes and wishes for someone special.';
+    document.title = 'Happy 20th Birthday, Nisha 🎂';
+    const desc = 'A modern dark-and-gradient celebration page for Nisha\u2019s 20th birthday \u2014 photos, videos, heartfelt quotes and wishes.';
     let m = document.querySelector('meta[name="description"]');
     if (!m) {
       m = document.createElement('meta');
@@ -25,7 +25,7 @@ const Index = () => {
     <main className="relative min-h-screen text-foreground">
       <GradientMesh />
       <Hero />
-      <Countdown />
+      <TodayBanner />
       <PhotoCarousel />
       <VideoCarousel />
       <Testimonials />
