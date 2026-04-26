@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import FloatingParticles from './FloatingParticles';
 
-const NAME = 'Aurora';
-const TAGLINE = 'Celebrating another beautiful year';
+const NAME = 'Nisha';
+const TAGLINE = 'Twenty years of you — and the world is brighter for it.';
 
 const letterVariants = {
   hidden: { opacity: 0, y: 60, rotateX: -90 },
