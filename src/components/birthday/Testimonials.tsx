@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 const quotes = [
-  { text: 'You light up every room you walk into. Wishing you a year as radiant as your soul.', name: 'Mom', role: 'Forever your biggest fan' },
-  { text: 'Another trip around the sun, and somehow you keep getting cooler. Cheers, legend.', name: 'James', role: 'Best friend since 2010' },
-  { text: 'Your laugh is the soundtrack of my favorite memories. Happy birthday, sister.', name: 'Mia', role: 'Sister' },
-  { text: 'Watching you grow into the human you are has been my greatest joy. I love you.', name: 'Dad', role: 'Dad' },
-  { text: 'Kindest, funniest, most unhinged person I know. Never change. Happy birthday!', name: 'Priya', role: 'College roomie' },
-  { text: 'You make ordinary days feel like something worth celebrating. Today, you take center stage.', name: 'Leo', role: 'Partner' },
+  { text: 'Nisha, you light up every room you walk into. Wishing you a twentieth year as radiant as your soul.', name: 'Mom', role: 'Forever your biggest fan' },
+  { text: 'Twenty already? Somehow you keep getting cooler every year. Cheers, legend.', name: 'Arjun', role: 'Best friend since kindergarten' },
+  { text: 'Your laugh is the soundtrack of my favorite memories. Happy 20th, behen.', name: 'Riya', role: 'Sister' },
+  { text: 'Watching you grow into the woman you are today has been my greatest joy. Proud of you, beta.', name: 'Papa', role: 'Dad' },
+  { text: 'Kindest, funniest, most unhinged human I know. Never change. Happy birthday, Nish!', name: 'Priya', role: 'College roomie' },
+  { text: 'You make ordinary days feel like something worth celebrating. Today, you take center stage.', name: 'Aanya', role: 'Soul sister' },
 ];
 
 const Testimonials = () => {
