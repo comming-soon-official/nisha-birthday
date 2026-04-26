@@ -1,47 +1,116 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
-import photo1 from '@/assets/photo-1.jpg';
-import photo3 from '@/assets/photo-3.jpg';
-import photo5 from '@/assets/photo-5.jpg';
-import photo2 from '@/assets/photo-2.jpg';
+import { Play, Volume2, VolumeX } from 'lucide-react';
+import video1 from '@/assets/video/ssstik.io_@luriktma06_1777183433048.mp4';
+import video2 from '@/assets/video/ssstik.io_1777183544364.mp4';
+import video3 from '@/assets/video/ssstik.io_@luriktma06_1777183670889.mp4';
+import video4 from '@/assets/video/ssstik.io_@luriktma06_1777183733405.mp4';
+import video5 from '@/assets/video/ssstik.io_@luriktma06_1777183861709.mp4';
+import video7 from '@/assets/video/ssstik.io_@luriktma06_1777184603026.mp4';
+import video8 from '@/assets/video/ssstik.io_@luriktma06_1777184767261.mp4';
 
-// Placeholder videos: free CDN sample MP4s.
 const videos = [
-  { src: 'https://cdn.pixabay.com/video/2023/10/27/186796-878499243_large.mp4', poster: photo5, title: 'Confetti Showers' },
-  { src: 'https://cdn.pixabay.com/video/2024/03/13/203358-922675589_large.mp4', poster: photo1, title: 'Toast & Cheers' },
-  { src: 'https://cdn.pixabay.com/video/2020/01/05/30887-383571726_large.mp4', poster: photo2, title: 'Candle Glow' },
-  { src: 'https://cdn.pixabay.com/video/2022/12/05/142048-778420810_large.mp4', poster: photo3, title: 'Joyful Nights' },
+  { src: video3, title: 'मैनबत्तीको त्यो उज्यालो' },
+  { src: video2, title: 'खुसीको उत्सव' },
+  { src: video5, title: 'जन्मदिनको उमङ्ग' },
+  { src: video1, title: 'रङ्गीन रौनकता' },
+  { src: video4, title: 'रमाइला रातहरू' },
+  { src: video7, title: 'मिठो सरप्राइज' },
+  { src: video8, title: 'फेरि त्यही रमाइलो' },
 ];
 
 const VideoCarousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  // User preference only: default is unmuted and changes only via speaker button.
+  const [isMuted, setIsMuted] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'center', containScroll: false },
-    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })],
+    [Autoplay({ delay: 10000, stopOnInteraction: false, stopOnMouseEnter: true })],
   );
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const syncActiveVideo = (index: number, muted: boolean) => {
+    videoRefs.current.forEach((v, i) => {
+      if (!v) return;
+      if (i === index) {
+        v.muted = muted;
+        if (muted) {
+          v.play().catch(() => {});
+        } else {
+          v.play().catch(() => {
+            // Browser may block autoplay with audio until user interaction.
+            // Keep user preference unchanged and temporarily fall back for playback.
+            v.muted = true;
+            v.play().catch(() => {});
+          });
+        }
+      } else {
+        v.pause();
+      }
+    });
+  };
 
   useEffect(() => {
     if (!emblaApi) return;
     const onSelect = () => {
       const idx = emblaApi.selectedScrollSnap();
-      videoRefs.current.forEach((v, i) => {
-        if (!v) return;
-        if (i === idx) v.play().catch(() => {});
-        else v.pause();
-      });
+      setActiveIndex(idx);
+      syncActiveVideo(idx, isMuted);
     };
     emblaApi.on('select', onSelect);
     onSelect();
     return () => {
       emblaApi.off('select', onSelect);
     };
-  }, [emblaApi]);
+  }, [emblaApi, isMuted]);
+
+  const toggleMute = () => {
+    const nextMuted = !isMuted;
+    setIsMuted(nextMuted);
+    syncActiveVideo(activeIndex, nextMuted);
+  };
+
+  useEffect(() => {
+    if (!sectionRef.current || isMuted) return;
+
+    const tryUnmuteActive = () => {
+      const activeVideo = videoRefs.current[activeIndex];
+      if (!activeVideo) return;
+      activeVideo.muted = false;
+      activeVideo.play().catch(() => {
+        // Keep playback going if browser still blocks audio for now.
+        activeVideo.muted = true;
+        activeVideo.play().catch(() => {});
+      });
+    };
+
+    const section = sectionRef.current;
+    section.addEventListener('mouseenter', tryUnmuteActive);
+    section.addEventListener('touchstart', tryUnmuteActive, { passive: true });
+    section.addEventListener('wheel', tryUnmuteActive, { passive: true });
+    window.addEventListener('keydown', tryUnmuteActive);
+
+    return () => {
+      section.removeEventListener('mouseenter', tryUnmuteActive);
+      section.removeEventListener('touchstart', tryUnmuteActive);
+      section.removeEventListener('wheel', tryUnmuteActive);
+      window.removeEventListener('keydown', tryUnmuteActive);
+    };
+  }, [activeIndex, isMuted]);
 
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 sm:py-28 overflow-hidden">
+      <style>{`
+        .video-no-controls::-webkit-media-controls {
+          display: none !important;
+        }
+        .video-no-controls::-webkit-media-controls-enclosure {
+          display: none !important;
+        }
+      `}</style>
       <div className="container mx-auto px-6 text-center mb-12">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +119,7 @@ const VideoCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
         >
-          In Motion
+          भिडियोको झल्को
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -59,7 +128,7 @@ const VideoCarousel = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
         >
-          Our Favorite Memories
+          हाम्रा प्यारा सम्झनाहरू
         </motion.h2>
       </div>
 
@@ -81,15 +150,23 @@ const VideoCarousel = () => {
                   <video
                     ref={(el) => (videoRefs.current[i] = el)}
                     src={v.src}
-                    poster={v.poster}
-                    muted
+                    autoPlay
+                    muted={i === activeIndex ? isMuted : true}
                     loop
                     playsInline
                     preload="metadata"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="video-no-controls absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent pointer-events-none" />
-                  <div className="absolute top-4 right-4 h-10 w-10 rounded-full glass-card flex items-center justify-center">
+                  <button
+                    type="button"
+                    onClick={toggleMute}
+                    className="absolute top-4 right-4 h-10 w-10 rounded-full glass-card flex items-center justify-center text-accent"
+                    aria-label={isMuted ? 'Turn on video sound' : 'Mute video sound'}
+                  >
+                    {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                  </button>
+                  <div className="absolute top-4 left-4 h-10 w-10 rounded-full glass-card flex items-center justify-center">
                     <Play className="h-4 w-4 text-accent fill-accent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">

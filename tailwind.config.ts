@@ -12,8 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ['"Noto Serif Devanagari"', '"Playfair Display"', '"Kohinoor Devanagari"', '"Nirmala UI"', 'Mangal', 'serif'],
+        sans: ['"Noto Sans Devanagari"', 'Inter', '"Kohinoor Devanagari"', '"Nirmala UI"', 'Mangal', '"Arial Unicode MS"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

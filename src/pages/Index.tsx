@@ -5,7 +5,7 @@ import TodayBanner from '@/components/birthday/TodayBanner';
 import PhotoCarousel from '@/components/birthday/PhotoCarousel';
 import VideoCarousel from '@/components/birthday/VideoCarousel';
 import Testimonials from '@/components/birthday/Testimonials';
-import WishesForm from '@/components/birthday/WishesForm';
+import BirthdayFinale from '@/components/birthday/BirthdayFinale';
 import Footer from '@/components/birthday/Footer';
 
 const Index = () => {
@@ -29,7 +29,7 @@ const Index = () => {
       <PhotoCarousel />
       <VideoCarousel />
       <Testimonials />
-      <WishesForm />
+      <BirthdayFinale />
       <Footer />
     </main>
   );

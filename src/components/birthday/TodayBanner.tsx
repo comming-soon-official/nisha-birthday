@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { Cake, Heart, Sparkles, Star } from 'lucide-react';
 
 const milestones = [
-  { icon: Cake, value: '20', label: 'Years young', sub: 'A whole new chapter' },
-  { icon: Heart, value: '∞', label: 'Love received', sub: 'From everyone who knows you' },
-  { icon: Star, value: '7,305', label: 'Days of magic', sub: 'And every one of them mattered' },
-  { icon: Sparkles, value: 'Today', label: 'The big day', sub: 'It is finally here' },
+  { icon: Cake, value: '२०', label: 'वर्ष पुग्यौ', sub: 'जीवनको एउटा नयाँ अध्याय' },
+  { icon: Heart, value: '∞', label: 'पाएको माया', sub: 'तिमीलाई चिन्ने सबैको तर्फबाट' },
+  { icon: Star, value: '७,३०५', label: 'जादुमय दिनहरू', sub: 'र हरेक दिनको आफ्नै महत्व छ' },
+  { icon: Sparkles, value: 'आज', label: 'विशेष दिन', sub: 'अन्ततः यो दिन आयो' },
 ];
 
 const TodayBanner = () => {
@@ -29,13 +29,13 @@ const TodayBanner = () => {
             <Cake className="h-8 w-8 sm:h-10 sm:w-10 text-background" strokeWidth={2} />
           </motion.div>
           <p className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3 relative">
-            April 26 · 2026
+            अप्रिल २६ · २०२६
           </p>
           <h2 className="font-serif italic text-4xl sm:text-6xl md:text-7xl text-gradient mb-4 relative">
-            Today is the day
+            आजको दिन विशेष छ
           </h2>
           <p className="font-serif italic text-lg sm:text-2xl text-foreground/80 max-w-2xl mx-auto relative">
-            Twenty candles, one extraordinary soul. Let's make this one unforgettable, Nisha. 🎂
+            बीस वटा मैनबत्ती, एउटा अद्भुत आत्मा। यसलाई अविस्मरणीय बनाऔं, निशा। 🎂
           </p>
         </motion.div>
 

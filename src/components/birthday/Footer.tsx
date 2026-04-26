@@ -4,12 +4,12 @@ const Footer = () => (
   <footer className="relative py-12 px-6 border-t border-border/40">
     <div className="max-w-3xl mx-auto text-center space-y-4">
       <div className="flex items-center justify-center gap-2 text-accent font-serif italic text-lg">
-        <span>Made with</span>
+        <span>तिम्रो लागि,</span>
         <Heart className="h-4 w-4 fill-primary text-primary animate-pulse-glow" />
-        <span>for Nisha — on her 20th</span>
+        <span>हिमालले बनाएको</span>
       </div>
       <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground">
-        Here's to your roaring twenties ✨
+        तिम्रो यो २० को दशक भव्य रहोस् ✨
       </p>
     </div>
   </footer>

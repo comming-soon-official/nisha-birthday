@@ -2,20 +2,30 @@ import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
-import photo1 from '@/assets/photo-1.jpg';
-import photo2 from '@/assets/photo-2.jpg';
-import photo3 from '@/assets/photo-3.jpg';
-import photo4 from '@/assets/photo-4.jpg';
-import photo5 from '@/assets/photo-5.jpg';
-import photo6 from '@/assets/photo-6.jpg';
+import nisha2 from '@/assets/nisha2.jpg';
+import nisha3 from '@/assets/nisha3.jpg';
+import nisha4 from '@/assets/nisha4.jpg';
+import nisha5 from '@/assets/nisha5.jpg';
+import nisha7 from '@/assets/nisha7.jpg';
+import nisha8 from '@/assets/nisha8.jpg';
+import nisha9 from '@/assets/nisha9.png';
+import nisha10 from '@/assets/nisha10.png';
+import nisha11 from '@/assets/nisha11.png';
+import nisha12 from '@/assets/nisha12.png';
+import nisha13 from '@/assets/nisha13.jpeg';
 
 const photos = [
-  { src: photo1, caption: 'Cheers to you' },
-  { src: photo2, caption: 'Make a wish' },
-  { src: photo3, caption: 'Laughter that lasts' },
-  { src: photo4, caption: 'Sparkles & toasts' },
-  { src: photo5, caption: 'Petals in the air' },
-  { src: photo6, caption: 'Wrapped with love' },
+  { src: nisha2, caption: 'एउटा मिठो चाहना' },
+  { src: nisha3, caption: 'सधैं रहिरहने हाँसो' },
+  { src: nisha4, caption: 'खुसीका रङ्गहरू' },
+  { src: nisha5, caption: 'रङ्गीन यादहरू' },
+  { src: nisha7, caption: 'सधैं यसरी नै चम्किरहनु' },
+  { src: nisha8, caption: 'मुस्कानले भरिएको संसार' },
+  { src: nisha9, caption: 'प्यारा साना पलहरू' },
+  { src: nisha10, caption: 'न्यानो मुस्कान' },
+  { src: nisha11, caption: 'उमङ्ग र उत्साह' },
+  { src: nisha12, caption: 'खुसीको एउटा झलक' },
+  { src: nisha13, caption: 'साँचेर राखेका सम्झनाहरू' },
 ];
 
 const PhotoCarousel = () => {
@@ -38,7 +48,7 @@ const PhotoCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
         >
-          The Gallery
+          फोटो ग्यालरी
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -47,7 +57,7 @@ const PhotoCarousel = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
         >
-          Moments to Remember
+          कहिल्यै नमेटिने पलहरू
         </motion.h2>
       </div>
 

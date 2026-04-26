@@ -2,12 +2,36 @@ import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 const quotes = [
-  { text: 'Nisha, you light up every room you walk into. Wishing you a twentieth year as radiant as your soul.', name: 'Mom', role: 'Forever your biggest fan' },
-  { text: 'Twenty already? Somehow you keep getting cooler every year. Cheers, legend.', name: 'Arjun', role: 'Best friend since kindergarten' },
-  { text: 'Your laugh is the soundtrack of my favorite memories. Happy 20th, behen.', name: 'Riya', role: 'Sister' },
-  { text: 'Watching you grow into the woman you are today has been my greatest joy. Proud of you, beta.', name: 'Papa', role: 'Dad' },
-  { text: 'Kindest, funniest, most unhinged human I know. Never change. Happy birthday, Nish!', name: 'Priya', role: 'College roomie' },
-  { text: 'You make ordinary days feel like something worth celebrating. Today, you take center stage.', name: 'Aanya', role: 'Soul sister' },
+  { 
+    text: 'तिम्रो हाँसो अलि बेग्लै छ, यो कोलाहलमा पनि आफ्नै धुन बोकेर हिँड्छ। अरूले जे सुकै भनून्, तर तिमीले आफ्नो त्यो चञ्चलता कहिल्यै नगुमाउनु।', 
+    name: 'निशा', 
+    role: 'आफ्नै धुन' 
+  },
+  { 
+    text: 'बीस वर्ष पुग्दा मनमा धेरै कुरा खेल्छन् होला, अलि डर अलि उत्साह। तर याद राख, तिमीले केही प्रमाणित गरिरहनु पर्दैन, तिमी जस्तो छौ, यो उमेरको लागि त्यही काफी छ।', 
+    name: 'अस्तित्व', 
+    role: 'नयाँ मोड' 
+  },
+  { 
+    text: 'कति रातहरू गाह्रो भए होलान्, कति पटक भित्रभित्रै भाँचियौ होला। तर आज यहाँसम्म आइपुग्दा तिम्रो आँखामा जुन चमक छ नि, त्यो नै तिम्रो सबैभन्दा ठूलो जित हो।', 
+    name: 'हिम्मत', 
+    role: 'जित' 
+  },
+  { 
+    text: 'यो संसारमा मान्छेहरू आउँछन् र जान्छन्, तर तिम्रो त्यो अलिकति जिद्दी र धेरै मायालु स्वभाव—यसलाई सधैं जीवित राख्नु। यही नै तिमीलाई अरूभन्दा फरक बनाउने कुरा हो।', 
+    name: 'स्वभाव', 
+    role: 'खास तिमी' 
+  },
+  { 
+    text: 'समय छिटो दौडिन्छ, तर तिमी कहिलेकाहीँ रोकिनु। आफ्नै मनको कुरा सुन्नु। तिमी आफैंमा एउटा यस्तो संसार हौ, जहाँ खुसी हुन कसैको अनुमति चाहिँदैन।', 
+    name: 'दर्शन', 
+    role: 'स्वतन्त्र मन' 
+  },
+  { 
+    text: 'संसारलाई धेरै ठूला कुरा चाहिएको छैन, बस तिमी जस्तो कोमल मन भएको एउटा मान्छे भए पुग्छ। तिमी हुनु मात्रै पनि धेरैका लागि एउटा ठूलो राहत हो।', 
+    name: 'महत्व', 
+    role: 'उपहार' 
+  },
 ];
 
 const Testimonials = () => {
@@ -22,7 +46,7 @@ const Testimonials = () => {
             transition={{ duration: 0.6 }}
             className="text-xs sm:text-sm tracking-[0.4em] uppercase text-accent mb-3"
           >
-            From the people who love you
+            निशाको लागि मात्र
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -31,7 +55,7 @@ const Testimonials = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl md:text-6xl text-gradient italic"
           >
-            Words from the Heart
+            केही मनका कुरा
           </motion.h2>
         </div>
 
@@ -47,7 +71,7 @@ const Testimonials = () => {
               className="relative glass-card gradient-border rounded-3xl p-7 sm:p-8 group"
             >
               <Quote
-                className="absolute top-5 right-5 h-10 w-10 text-accent/30 group-hover:text-accent/60 transition-colors"
+                className="absolute top-5 right-5 h-4 w-4 text-accent/30 group-hover:text-accent/60 transition-colors"
                 strokeWidth={1.5}
               />
               <p className="font-serif italic text-lg sm:text-xl leading-relaxed text-foreground/90 mb-6">
